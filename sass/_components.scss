@@ -1,0 +1,27 @@
+@use "colors.scss";
+
+.btn {
+	padding: 15px;
+	border: 1px solid transparent;
+	border-radius: 999px;
+	font-size: 14px;
+	font-weight: 700;
+	color: colors.$white;
+	min-width: 120px;
+	transition: background-color 0.3s, color 0.3s;
+	&__green {
+		background-color: colors.$primary;
+		&:hover {
+			background-color: colors.$white;
+			color: colors.$primary;
+		}
+	}
+	&__trans {
+		border: 1px solid colors.$white;
+		background: none;
+		&:hover {
+			background-color: colors.$white;
+			color: colors.$primary;
+		}
+	}
+}
