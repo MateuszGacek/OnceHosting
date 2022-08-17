@@ -29,6 +29,19 @@ body {
 	padding: 0 10px;
 	max-width: 1200px;
 }
+.section {
+	&__title {
+		margin-top: 20px;
+		margin-bottom: 10px;
+		color: colors.$primary;
+		font-size: 16px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+	&__desc {
+		font-size: 24px;
+	}
+}
 
 .header {
 	display: flex;
@@ -129,15 +142,7 @@ body {
 	justify-content: center;
 	text-align: center;
 	margin-top: 120px;
-	&__title {
-		margin-bottom: 10px;
-		color: colors.$primary;
-		font-size: 16px;
-		font-weight: 400;
-	}
-	&__desc {
-		font-size: 24px;
-	}
+
 	&__box {
 		&-card {
 			padding: 25px;
@@ -164,7 +169,123 @@ body {
 	}
 }
 
+.about-us {
+	display: flex;
+	justify-content: center;
+	padding: 0 10px;
+	text-align: center;
+	&__img {
+		margin: 20px 0;
+		object-fit: cover;
+		object-position: center;
+		max-height: 300px;
+		width: 90%;
+		border-radius: 20px;
+	}
+	&__parag {
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+}
+
+.pricing {
+	padding: 0 10px;
+	text-align: center;
+	&__parag {
+		font-size: 14px;
+	}
+	&__box {
+		display: block;
+		max-width: 1200px;
+		margin: 0 auto;
+		&-slide {
+			margin: 0 20px;
+		}
+		&-card {
+			width: 230px;
+			margin: 35px auto;
+			padding: 10px 5px;
+			text-align: start;
+			border-radius: 20px;
+			box-shadow: 6px 6px 13px 0px rgba(8, 8, 8, 0.5);
+
+			&-title {
+				text-align: center;
+			}
+			&-price {
+				text-align: center;
+				font-size: 28px;
+				font-weight: 700;
+			}
+			&-span {
+				font-size: 16px;
+			}
+			&-parag {
+				font-size: 14px;
+				margin: 25px 0;
+			}
+
+			&-list {
+				position: relative;
+				margin: 8px 0 8px 30px;
+				list-style: none;
+				font-size: 14px;
+				&::before {
+					position: absolute;
+					border: 1px solid colors.$black;
+					border-radius: 50%;
+					left: -30px;
+					top: 0;
+					width: 20px;
+					height: 20px;
+					content: url(../img/icon/checkBlack.svg);
+				}
+				&--middle {
+					&::before {
+						border: 1px solid colors.$white;
+						background: colors.$white;
+						content: url(../img/icon/checkGreen.svg);
+					}
+				}
+			}
+			.btn {
+				display: block;
+				margin: 30px auto 0;
+				&--middle {
+					color: colors.$primary;
+					&:hover {
+						color: colors.$white;
+						border: 1px solid colors.$white;
+						background-color: colors.$primary;
+					}
+				}
+			}
+			&--middle {
+				background-color: colors.$primary;
+				color: colors.$white;
+			}
+		}
+	}
+}
+
+// SLICK
+// .slick-slide {
+// 	display: flex;
+// 	justify-content: center;
+// }
+
 //MEDIA
+@media (min-width: 350px) {
+	.pricing {
+		&__box {
+			&-card {
+				width: 300px;
+				padding: 30px 15px;
+			}
+		}
+	}
+}
+
 @media (min-width: 576px) {
 	.services {
 		&__box {
@@ -178,6 +299,16 @@ body {
 	}
 }
 @media (min-width: 768px) {
+	.section {
+		&__title {
+			margin-top: 40px;
+			font-size: 26px;
+			font-weight: 400;
+		}
+		&__desc {
+			font-size: 32px;
+		}
+	}
 	.header {
 		&__comp {
 			font-size: 36px;
@@ -232,4 +363,45 @@ body {
 			}
 		}
 	}
+	.about-us {
+		margin-top: 85px;
+		.btn {
+			grid-column: 2/3;
+			grid-row: 4/5;
+			height: 60px;
+			max-width: 165px;
+			height: 48px;
+		}
+		&__wrapper {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(4, 1fr);
+			max-width: 1200px;
+			text-align: left;
+		}
+
+		.section {
+			&__title {
+				grid-column: 2/3;
+				grid-row: 1/2;
+			}
+			&__desc {
+				grid-column: 2/3;
+				grid-row: 2/3;
+			}
+		}
+		&__img {
+			max-height: 90%;
+			grid-column: 1/2;
+			grid-row: 1/-1;
+			content: url(../img/aboutUs-1920.jpg);
+		}
+	}
+	// .pricing {
+	// 	&__box {
+	// 		&-card {
+	// 			margin: 35px 15px;
+	// 		}
+	// 	}
+	// }
 }

@@ -15,6 +15,13 @@
 			rel="stylesheet"
 		/>
 		<link href="./css/hamburger.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+		/>
+		<link rel="stylesheet" type="text/css" href="slick/slick.css" />
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<title>OnceHosting</title>
 	</head>
@@ -58,8 +65,8 @@
 		<main class="main">
 			<section class="services">
 				<div class="wrapper">
-					<h2 class="services__title">services</h2>
-					<h3 class="services__desc">Why Choose Us</h3>
+					<h2 class="section__title">services</h2>
+					<h3 class="section__desc">Why Choose Us</h3>
 					<div class="services__box">
 						<div class="services__box-card">
 							<i class="fa-solid fa-coins services__box-card-icon"></i>
@@ -96,8 +103,114 @@
 					</div>
 				</div>
 			</section>
+			<section class="about-us">
+				<div class="about-us__wrapper">
+					<h2 class="section__title">about us</h2>
+					<h3 class="section__desc">
+						Best hosting provider in the world at rocket speed
+					</h3>
+					<img
+						src="../img/aboutUs-640.jpg"
+						alt="computer servers"
+						class="about-us__img"
+					/>
+					<p class="about-us__parag">
+						The best hosting provider in the world with rocket speed that will
+						make your website dynamic and active
+					</p>
+					<button class="btn btn__green">Get Started</button>
+				</div>
+			</section>
+			<section class="pricing" id="pricing">
+				<h2 class="section__title">Pricing</h2>
+				<h3 class="section__desc">Choose your plans</h3>
+				<p class="pricing__parag">
+					Choose your favorite price package and adjust it to your current needs
+				</p>
+				<div class="pricing__box">
+					<div class="pricing__box-slide">
+						<div class="pricing__box-card">
+							<h4 class="pricing__box-card-title">Regular</h4>
+							<p class="pricing__box-card-price">
+								$24,00 <span class="pricing__box-card-span">/Month</span>
+							</p>
+							<p class="pricing__box-card-parag">
+								Small package with many and attractive benefits for you
+							</p>
+							<ul>
+								<li class="pricing__box-card-list">1 GB space</li>
+								<li class="pricing__box-card-list">Unlimited traffic</li>
+								<li class="pricing__box-card-list">Unlimited email</li>
+								<li class="pricing__box-card-list">Free weekly sitebuilder</li>
+								<li class="pricing__box-card-list">Free SSL</li>
+								<li class="pricing__box-card-list">Small cloud resorce</li>
+								<li class="pricing__box-card-list">Turbo booster optional</li>
+								<li class="pricing__box-card-list">Security 360 optional</li>
+							</ul>
+							<button class="btn btn__green">Buy Now</button>
+						</div>
+					</div>
+					<div class="pricing__box-slide">
+						<div class="pricing__box-card pricing__box-card--middle">
+							<h4 class="pricing__box-card-title">Medium</h4>
+							<p class="pricing__box-card-price">
+								$84,00 <span class="pricing__box-card-span">/Month</span>
+							</p>
+							<p class="pricing__box-card-parag">
+								Medium package with many and attractive benefits for you
+							</p>
+							<ul>
+								<li class="pricing__box-card-list pricing__box-card-list--middle">Unlimited space</li>
+								<li class="pricing__box-card-list pricing__box-card-list--middle">Unlimited traffic</li>
+								<li class="pricing__box-card-list pricing__box-card-list--middle">Unlimited email</li>
+								<li class="pricing__box-card-list pricing__box-card-list--middle">Free weekly sitebuilder</li>
+								<li class="pricing__box-card-list pricing__box-card-list--middle">Free SSL</li>
+								<li class="pricing__box-card-list pricing__box-card-list--middle">Medium cloud resorce</li>
+								<li class="pricing__box-card-list pricing__box-card-list--middle">Turbo booster super</li>
+								<li class="pricing__box-card-list pricing__box-card-list--middle">Security 360 super</li>
+							</ul>
+							<button class="btn btn--middle">Buy Now</button>
+						</div>
+					</div>
+					<div class="pricing__box-slide">
+						<div class="pricing__box-card">
+							<h4 class="pricing__box-card-title">Premium</h4>
+							<p class="pricing__box-card-price">
+								$124,00 <span class="pricing__box-card-span">/Month</span>
+							</p>
+							<p class="pricing__box-card-parag">
+								Premium package with many and attractive benefits for you
+							</p>
+							<ul>
+								<li class="pricing__box-card-list">Unlimited space</li>
+								<li class="pricing__box-card-list">Unlimited traffic</li>
+								<li class="pricing__box-card-list">Unlimited email</li>
+								<li class="pricing__box-card-list">Free weekly sitebuilder</li>
+								<li class="pricing__box-card-list">Free SSL</li>
+								<li class="pricing__box-card-list">Large cloud resorce</li>
+								<li class="pricing__box-card-list">Super turbo booster optional</li>
+								<li class="pricing__box-card-list">Security 360 super</li>
+							</ul>
+							<button class="btn btn__green">Buy Now</button>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 
-		<div style="height: 200vh"></div>
+		<!-- <div style="height: 200vh"></div> -->
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-1.11.0.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+		></script>
+		<script src="./js/slick.js"></script>
 	</body>
 </html>

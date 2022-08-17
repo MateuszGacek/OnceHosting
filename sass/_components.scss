@@ -11,8 +11,10 @@
 	transition: background-color 0.3s, color 0.3s;
 	&__green {
 		background-color: colors.$primary;
+		border: 1px solid transparent;
 		&:hover {
 			background-color: colors.$white;
+			border: 1px solid colors.$primary;
 			color: colors.$primary;
 		}
 	}
