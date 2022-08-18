@@ -12,6 +12,16 @@
 body {
 	font-family: "Poppins", sans-serif;
 }
+::-webkit-scrollbar {
+	width: 20px;
+}
+::-webkit-scrollbar-track {
+	background-color: colors.$gray;
+}
+::-webkit-scrollbar-thumb {
+	background: colors.$primary;
+	border-radius: 10px;
+}
 
 .hamburger {
 	position: fixed;
@@ -351,7 +361,7 @@ body {
 	position: sticky;
 	bottom: 0;
 	padding: 35px 10px;
-	background-color: #333;
+	background-color: colors.$gray;
 	z-index: -1;
 
 	&__list {
@@ -367,7 +377,7 @@ body {
 
 		li {
 			transition: color 0.4s;
-			color: colors.$gray;
+			color: colors.$whiteAlpha;
 			list-style: none;
 			&:hover {
 				color: colors.$primary;
