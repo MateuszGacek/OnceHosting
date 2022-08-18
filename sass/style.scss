@@ -202,8 +202,10 @@ body {
 			margin: 0 20px;
 		}
 		&-card {
+			position: relative;
 			width: 230px;
-			margin: 35px auto;
+			height: 500px;
+			margin: 35px auto 20px;
 			padding: 10px 5px;
 			text-align: start;
 			border-radius: 20px;
@@ -230,6 +232,7 @@ body {
 				margin: 8px 0 8px 30px;
 				list-style: none;
 				font-size: 14px;
+
 				&::before {
 					position: absolute;
 					border: 1px solid colors.$black;
@@ -249,6 +252,10 @@ body {
 				}
 			}
 			.btn {
+				position: absolute;
+				bottom: 10px;
+				left: 50%;
+				transform: translateX(-50%);
 				display: block;
 				margin: 30px auto 0;
 				&--middle {
@@ -268,11 +275,32 @@ body {
 	}
 }
 
-// SLICK
-// .slick-slide {
-// 	display: flex;
-// 	justify-content: center;
-// }
+// SLICK SLIDER
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	list-style: none;
+	button {
+		margin: 0 5px;
+		border: none;
+		border-radius: 50%;
+		height: 15px;
+		width: 15px;
+		background-color: colors.$white;
+		border: 1px solid colors.$primary;
+		font-size: 0px;
+		line-height: 0;
+	}
+
+	.slick-active {
+		button {
+			background-color: colors.$primary;
+			height: 20px;
+			width: 20px;
+		}
+	}
+}
 
 //MEDIA
 @media (min-width: 350px) {
@@ -280,6 +308,7 @@ body {
 		&__box {
 			&-card {
 				width: 300px;
+				height: 500px;
 				padding: 30px 15px;
 			}
 		}

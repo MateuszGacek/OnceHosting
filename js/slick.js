@@ -11,6 +11,7 @@ $(document).ready(function () {
 					slidesToShow: 1,
 					infinite: true,
 					initialSlide: 1,
+					dots: true,
 				},
 			},
 		],

@@ -271,8 +271,10 @@ body {
   margin: 0 20px;
 }
 .pricing__box-card {
+  position: relative;
   width: 230px;
-  margin: 35px auto;
+  height: 500px;
+  margin: 35px auto 20px;
   padding: 10px 5px;
   text-align: start;
   border-radius: 20px;
@@ -316,6 +318,11 @@ body {
   content: url(../img/icon/checkGreen.svg);
 }
 .pricing__box-card .btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: block;
   margin: 30px auto 0;
 }
@@ -332,9 +339,40 @@ body {
   color: #ffffff;
 }
 
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+}
+.slick-dots button {
+  margin: 0 5px;
+  border: none;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background-color: #ffffff;
+  border: 1px solid #05ab6e;
+  font-size: 0px;
+  line-height: 0;
+}
+.slick-dots .slick-active button {
+  background-color: #05ab6e;
+  height: 20px;
+  width: 20px;
+}
+
 @media (min-width: 350px) {
   .pricing__box-card {
     width: 300px;
+    height: 500px;
     padding: 30px 15px;
   }
 }
