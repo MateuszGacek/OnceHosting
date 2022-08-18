@@ -423,7 +423,7 @@ body {
 .footer {
   position: sticky;
   bottom: 0;
-  padding: 15px 10px;
+  padding: 35px 10px;
   background-color: #333;
   z-index: -1;
 }
@@ -440,6 +440,9 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+.footer__list ul {
+  padding: 0 5px;
+}
 .footer__list li {
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
@@ -453,10 +456,6 @@ body {
 .footer__list li:first-child {
   color: #ffffff;
   margin-bottom: 15px;
-}
-.footer__mask {
-  height: 50px;
-  background-color: #333;
 }
 
 .view-mask {
