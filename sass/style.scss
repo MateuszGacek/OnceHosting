@@ -29,10 +29,15 @@ body {
 	padding: 0 10px;
 	max-width: 1200px;
 }
+.full-bleed {
+	box-shadow: 0 0 0 100vmax colors.$white;
+	clip-path: inset(-1px -100vmax);
+}
 .section {
+	background-color: colors.$white;
 	&__title {
-		margin-top: 20px;
-		margin-bottom: 10px;
+		padding-top: 20px;
+		padding-bottom: 10px;
 		color: colors.$primary;
 		font-size: 16px;
 		font-weight: 400;
@@ -65,7 +70,7 @@ body {
 		font-size: 18px;
 	}
 	&__title {
-		margin-top: 55px;
+		padding-top: 55px;
 		color: colors.$white;
 		font-size: 28px;
 	}
@@ -141,7 +146,7 @@ body {
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	margin-top: 120px;
+	padding-top: 120px;
 
 	&__box {
 		&-card {
@@ -274,7 +279,111 @@ body {
 		}
 	}
 }
+.support {
+	text-align: center;
+	padding: 0 10px;
+	.section {
+		&__title {
+			padding: 35px 0 15px;
+		}
+		&__desc {
+			margin: 25px 0;
+		}
+	}
+	&__img {
+		margin: 25px 0;
+		object-fit: cover;
+		object-position: center;
+		width: 90%;
+		border-radius: 20px;
+	}
+	&__parag {
+		margin: 25px 0;
+	}
+	.btn {
+		margin: 25px 0;
+	}
+}
+.feedback {
+	text-align: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	img {
+		font-size: 10px;
+	}
+	&__box {
+		&-card {
+			position: relative;
+			padding: 25px;
+			margin: 35px auto;
+			max-width: 300px;
+			border: 1px solid colors.$grayAlpha;
+			border-radius: 20px;
+			text-align: start;
+			box-shadow: 6px 6px 13px 0px rgba(8, 8, 8, 0.5);
+			&-img {
+				position: absolute;
+				left: 25px;
+				top: 25px;
+				border-radius: 50%;
+				height: 50px;
+				width: 50px;
+			}
+			&-name {
+				margin-left: 70px;
+			}
+			&-country {
+				color: colors.$gray;
+				font-size: 12px;
+				margin-left: 70px;
+			}
+			&-parag {
+				font-size: 14px;
+				margin: 25px 0;
+			}
+			&-stars {
+				display: flex;
+			}
+		}
+	}
+}
+.footer {
+	position: sticky;
+	bottom: 0;
+	padding: 15px 10px;
+	background-color: #333;
+	z-index: -1;
 
+	&__list {
+		left: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: 1200px;
+		margin: 0 auto;
+
+		li {
+			transition: color 0.4s;
+			color: colors.$gray;
+			list-style: none;
+			&:hover {
+				color: colors.$primary;
+				cursor: pointer;
+			}
+		}
+		li:first-child {
+			color: colors.$white;
+			margin-bottom: 15px;
+		}
+	}
+	&__mask {
+		height: 50px;
+		background-color: #333;
+	}
+}
+.view-mask {
+	display: none;
+}
 // SLICK SLIDER
 .slick-dots {
 	display: flex;
@@ -282,7 +391,7 @@ body {
 	flex-direction: row;
 	list-style: none;
 	button {
-		margin: 0 5px;
+		margin: 0 5px 10px;
 		border: none;
 		border-radius: 50%;
 		height: 15px;
@@ -330,7 +439,7 @@ body {
 @media (min-width: 768px) {
 	.section {
 		&__title {
-			margin-top: 40px;
+			padding-top: 40px;
 			font-size: 26px;
 			font-weight: 400;
 		}
@@ -393,7 +502,7 @@ body {
 		}
 	}
 	.about-us {
-		margin-top: 85px;
+		padding-top: 85px;
 		.btn {
 			grid-column: 2/3;
 			grid-row: 4/5;
@@ -426,11 +535,42 @@ body {
 			content: url(../img/aboutUs-1920.jpg);
 		}
 	}
-	// .pricing {
-	// 	&__box {
-	// 		&-card {
-	// 			margin: 35px 15px;
-	// 		}
-	// 	}
-	// }
+	.support {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		max-width: 1200px;
+		margin: 0 auto;
+		padding-top: 45px;
+		.section {
+			&__title {
+				grid-column: 1/2;
+				grid-row: 1/2;
+				margin: 5px 0;
+			}
+			&__desc {
+				grid-column: 1/2;
+				grid-row: 2/3;
+				margin: 5px 0;
+				font-size: 22px;
+			}
+		}
+		&__img {
+			grid-column: 2/3;
+			grid-row: 1/-1;
+			margin: auto;
+		}
+		&__parag {
+			grid-column: 1/2;
+			grid-row: 3/4;
+			margin: 5px 0;
+		}
+		.btn {
+			grid-column: 1/2;
+			grid-row: 4/5;
+			margin: 5px auto;
+			width: 165px;
+			height: 48px;
+		}
+	}
 }
