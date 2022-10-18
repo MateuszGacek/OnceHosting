@@ -8,6 +8,7 @@
   min-width: 120px;
   -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
 }
 .btn__green {
   background-color: #05ab6e;

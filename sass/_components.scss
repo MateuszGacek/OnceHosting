@@ -1,4 +1,4 @@
-@use "colors.scss";
+@use 'colors.scss';
 
 .btn {
 	padding: 15px;
@@ -9,6 +9,7 @@
 	color: colors.$white;
 	min-width: 120px;
 	transition: background-color 0.3s, color 0.3s;
+	cursor: pointer;
 	&__green {
 		background-color: colors.$primary;
 		border: 1px solid transparent;
